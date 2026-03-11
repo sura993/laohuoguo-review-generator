@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 火锅店AI好评生成器 | 小红书一键发布</title>
+    <meta name="description" content="为我们的火锅店生成高质量小红书好评，一键发布分享美味体验！">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部LOGO和标题 -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <h1>麻辣火锅坊</h1>
+            </div>
+            <p class="subtitle">感谢您的光临！请为我们的火锅生成一条小红书好评</p>
+        </header>
+
+        <!-- 进度指示器 -->
+        <div class="progress-steps">
+            <div class="step active">
+                <span class="step-number">1</span>
+                <span class="step-text">生成好评</span>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <span class="step-text">编辑确认</span>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <span class="step-text">发布分享</span>
+            </div>
+        </div>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 菜品选择区域 -->
+            <section class="dish-selection">
+                <h2><i class="fas fa-list-check"></i> 请选择您品尝的菜品</h2>
+                <div class="dish-grid">
+                    <div class="dish-card" data-dish="麻辣牛油锅">
+                        <div class="dish-icon"><i class="fas fa-fire"></i></div>
+                        <h3>麻辣牛油锅</h3>
+                        <p>经典川味，香辣过瘾</p>
+                    </div>
+                    <div class="dish-card" data-dish="番茄牛腩锅">
+                        <div class="dish-icon"><i class="fas fa-apple-alt"></i></div>
+                        <h3>番茄牛腩锅</h3>
+                        <p>酸甜开胃，营养丰富</p>
+                    </div>
+                    <div class="dish-card" data-dish="菌菇养生锅">
+                        <div class="dish-icon"><i class="fas fa-mushroom"></i></div>
+                        <h3>菌菇养生锅</h3>
+                        <p>鲜美滋补，健康首选</p>
+                    </div>
+                    <div class="dish-card" data-dish="鸳鸯锅">
+                        <div class="dish-icon"><i class="fas fa-yin-yang"></i></div>
+                        <h3>鸳鸯锅</h3>
+                        <p>一锅两味，满足多样</p>
+                    </div>
+                </div>
+                
+                <!-- 特色菜品 -->
+                <div class="special-dishes">
+                    <h3>特色推荐菜品（可多选）</h3>
+                    <div class="special-grid">
+                        <label class="special-item">
+                            <input type="checkbox" name="special" value="极品肥牛">
+                            <span>极品肥牛</span>
+                        </label>
+                        <label class="special-item">
+                            <input type="checkbox" name="special" value="手打虾滑">
+                            <span>手打虾滑</span>
+                        </label>
+                        <label class="special-item">
+                            <input type="checkbox" name="special" value="毛肚">
+                            <span>鲜毛肚</span>
+                        </label>
+                        <label class="special-item">
+                            <input type="checkbox" name="special" value="鸭血">
+                            <span>鲜鸭血</span>
+                        </label>
+                        <label class="special-item">
+                            <input type="checkbox" name="special" value="黄喉">
+                            <span>脆黄喉</span>
+                        </label>
+                        <label class="special-item">
+                            <input type="checkbox" name="special" value="脑花">
+                            <span>麻辣脑花</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 评分区域 -->
+            <section class="rating-section">
+                <h2><i class="fas fa-star"></i> 请为本次用餐体验评分</h2>
+                <div class="rating-container">
+                    <div class="rating-category">
+                        <h3>口味</h3>
+                        <div class="stars" data-category="taste">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <h3>服务</h3>
+                        <div class="stars" data-category="service">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                    <div class="rating-category">
+                        <h3>环境</h3>
+                        <div class="stars" data-category="environment">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI生成按钮 -->
+            <section class="generate-section">
+                <button id="generateBtn" class="generate-btn">
+                    <i class="fas fa-robot"></i>
+                    <span>AI智能生成好评</span>
+                </button>
+                <p class="generate-hint">AI将根据您的选择生成个性化好评文案</p>
+            </section>
+
+            <!-- 好评展示区域 -->
+            <section class="review-section" style="display: none;">
+                <h2><i class="fas fa-comment-dots"></i> 为您生成的好评</h2>
+                <div class="review-container">
+                    <div class="review-header">
+                        <div class="word-count">
+                            <i class="fas fa-text-height"></i>
+                            <span id="wordCount">0</span> 字
+                        </div>
+                        <button id="copyBtn" class="icon-btn" title="复制文案">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <textarea id="reviewText" class="review-textarea" placeholder="AI正在生成好评文案..." rows="8"></textarea>
+                    
+                    <div class="review-actions">
+                        <button id="regenerateBtn" class="action-btn secondary">
+                            <i class="fas fa-redo"></i> 重新生成
+                        </button>
+                        <button id="editBtn" class="action-btn">
+                            <i class="fas fa-edit"></i> 编辑文案
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 发布到小红书区域 -->
+            <section class="publish-section" style="display: none;">
+                <h2><i class="fab fa-xiaohongshu"></i> 发布到小红书</h2>
+                <div class="publish-container">
+                    <div class="publish-info">
+                        <p>您的文案已准备好！点击下方按钮将跳转到小红书APP发布页面。</p>
+                        <ul class="publish-tips">
+                            <li><i class="fas fa-check-circle"></i> 文案已复制到剪贴板</li>
+                            <li><i class="fas fa-check-circle"></i> 可在小红书内粘贴使用</li>
+                            <li><i class="fas fa-check-circle"></i> 建议添加美食照片更佳</li>
+                        </ul>
+                    </div>
+                    <button id="publishBtn" class="publish-btn">
+                        <i class="fab fa-xiaohongshu"></i>
+                        <span>发布到小红书</span>
+                    </button>
+                    <p class="publish-note">点击后将跳转到小红书APP，您可以在那里添加图片并发布</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部信息 -->
+        <footer class="footer">
+            <p>感谢您选择麻辣火锅坊！期待您的再次光临</p>
+            <p class="contact-info">
+                <i class="fas fa-phone"></i> 联系电话：138-8888-8888 |
+                <i class="fas fa-map-marker-alt"></i> 地址：成都市锦江区火锅大道88号
+            </p>
+            <p class="footer-note">本系统仅辅助生成好评文案，发布需用户手动操作</p>
+        </footer>
+    </div>
+
+    <!-- 加载动画 -->
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <i class="fas fa-utensils fa-spin"></i>
+            </div>
+            <p>AI正在为您生成好评文案...</p>
+            <p class="loading-subtext">请稍候，这需要几秒钟时间</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
